@@ -222,7 +222,6 @@ body {
         background: #55697b;
         flex-direction: column;
         width: 100%;
-        max-width: 320px;
         padding: 1rem;
         transform: translateX(-110%);
         transition: transform 0.25s ease, visibility 0.25s ease;

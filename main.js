@@ -16,6 +16,9 @@ const strings = {
         aboutTitle: 'Sobre Mim',
         aboutText: 'Olá, eu sou o Daniel. Sou aluno da Fatec, atualmente no curso de Desenvolvimento de Software Multiplataforma.',
         workTitle: 'Projetos',
+        sortOldest: 'Mais antigo',
+        sortNewest: 'Mais novo',
+        showAllProjects: 'Mostrar todos',
         project1Title: 'Projeto 1',
         project1Text: 'Site do Corinthians, meu primeiro projeto da Fatec.',
         project2Title: 'Projeto 2',
@@ -36,6 +39,9 @@ const strings = {
         aboutTitle: 'About Me',
         aboutText: 'Hi, I am Daniel. I study at Fatec in the Multiplatform Software Development course.',
         workTitle: 'Projects',
+        sortOldest: 'Oldest',
+        sortNewest: 'Newest',
+        showAllProjects: 'Show all',
         project1Title: 'Project 1',
         project1Text: 'Corinthians website, my first project at Fatec.',
         project2Title: 'Project 2',
@@ -45,6 +51,41 @@ const strings = {
         footer: '© 2026 Daniel Alves. All rights reserved.<br>Repository: <a href="https://github.com/DanTheBrazuca/Portfolio" target="_blank"rel="noopener noreferrer">https://github.com/DanTheBrazuca/Portfolio</a>'
     }
 };
+
+const projects = [
+    { id: 1, titleKey: 'project1Title', descKey: 'project1Text', url: 'https://danthebrazuca.github.io/PRIMEIROSITE/', date: '2026-03-5' },
+    { id: 2, titleKey: 'project2Title', descKey: 'project2Text', url: 'https://danthebrazuca.github.io/SiteFatec1/', date: '2026-03-10' }
+];
+
+function renderProjects(order = 'newest') {
+    const grid = document.getElementById('projects-grid');
+    if (!grid) return;
+
+    const sorted = [...projects].sort((a, b) => {
+        if (order === 'oldest') return new Date(a.date) - new Date(b.date);
+        return new Date(b.date) - new Date(a.date);
+    });
+
+    grid.innerHTML = sorted.map(project => {
+        const title = strings[document.documentElement.lang.startsWith('pt') ? 'pt' : 'en'][project.titleKey];
+        const desc = strings[document.documentElement.lang.startsWith('pt') ? 'pt' : 'en'][project.descKey];
+
+        return `
+            <article class="card">
+                <h3>${title}</h3>
+                <p><a href="${project.url}" target="_blank" rel="noopener noreferrer">${desc}</a></p>
+                <p class="project-date">${new Date(project.date).toLocaleDateString(document.documentElement.lang)}</p>
+            </article>
+        `;
+    }).join('');
+}
+
+function setupProjectControls() {
+    const oldest = document.getElementById('sort-oldest');
+    const newest = document.getElementById('sort-newest');
+    if (oldest) oldest.addEventListener('click', () => renderProjects('oldest'));
+    if (newest) newest.addEventListener('click', () => renderProjects('newest'));
+}
 
 function setLanguage(lang) {
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
@@ -56,6 +97,8 @@ function setLanguage(lang) {
     });
     langBtn.textContent = strings[lang].langLabel;
     localStorage.setItem('site-lang', lang);
+    renderProjects();
+    setupProjectControls();
 }
 
 function setTheme(theme) {

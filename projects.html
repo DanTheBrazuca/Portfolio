@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Projetos - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="site-header">
         <div class="container">
-            <a href="#" class="logo">Daniel Alves</a>
+            <a href="index.html" class="logo">Daniel Alves</a>
             <nav class="nav">
-                <a href="#home" data-translate="navHome">Início</a>
-                <a href="#about" data-translate="navAbout">Sobre</a>
-                <a href="#work" data-translate="navWork">Projetos</a>
-                <a href="#contact" data-translate="navContact">Contato</a>
+                <a href="index.html#home" data-translate="navHome">Início</a>
+                <a href="index.html#about" data-translate="navAbout">Sobre</a>
+                <a href="index.html#work" data-translate="navWork">Projetos</a>
+                <a href="index.html#contact" data-translate="navContact">Contato</a>
             </nav>
             <div class="toggles">
                 <button id="lang-toggle" class="toggle-btn" aria-label="Toggle language">EN</button>
@@ -26,38 +26,15 @@
     </header>
 
     <main>
-        <section id="home" class="background">
-            <div class="container">
-                <img src="img/file.jpg" alt="Profile" class="profile-img">
-                <h1 data-translate="heroTitle">Bem vindo ao meu portfólio</h1>
-                <p data-translate="heroText">Sou um aluno da Fatec e esse é o meu portfólio.</p>
-                <a href="#work" class="btn" data-translate="btnWork">Ver meu trabalho</a>
-            </div>
-        </section>
-
-        <section id="about" class="section">
-            <div class="container">
-                <h2 data-translate="aboutTitle">Sobre Mim</h2>
-                <p data-translate="aboutText">Olá, eu sou o Daniel. Sou aluno da Fatec, atualmente no curso de Desenvolvimento de Software Multiplataforma.</p>
-            </div>
-        </section>
-
         <section id="work" class="section projects">
             <div class="container">
                 <h2 data-translate="workTitle">Projetos</h2>
                 <div class="project-controls">
                     <button id="sort-oldest" class="btn btn-secondary" data-translate="sortOldest">Mais antigo</button>
                     <button id="sort-newest" class="btn btn-secondary" data-translate="sortNewest">Mais novo</button>
-                    <a href="projects.html" class="btn" data-translate="showAllProjects">Mostrar todos</a>
+                    <a href="index.html" class="btn" data-translate="showAllProjects">Voltar</a>
                 </div>
                 <div class="grid" id="projects-grid"></div>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <div class="container">
-                <h2 data-translate="contactTitle">Contato</h2>
-                <p data-translate="contactText">Emails: <a href="mailto:dars120308@gmail.com">dars120308@gmail.com</a> | <a href="mailto:daniel.silva484@fatec.sp.gov.br">daniel.silva484@fatec.sp.gov.br</a></p>
             </div>
         </section>
     </main>

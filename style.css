@@ -115,13 +115,37 @@ body {
 }
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    text-align: center;
     text-decoration: none;
     background: #ff6f61;
     color: white;
     padding: 0.75rem 1.25rem;
     border-radius: 0.4rem;
     font-weight: 700;
+    border: none;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.btn:hover,
+.btn:focus {
+    transform: translateY(-1px);
+    filter: brightness(1.07);
+}
+
+.btn-secondary {
+    background: #1f8e66;
+}
+
+.project-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
 
 .section {
@@ -155,6 +179,20 @@ body {
     gap: 1rem;
 }
 
+.project-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.project-date {
+    margin-top: 0.5rem;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+}
+
 .card {
     background: var(--color-surface);
     border: 1px solid var(--color-border);
@@ -179,17 +217,26 @@ body {
     .nav {
         position: absolute;
         top: 70px;
+        left: 0;
         right: 0;
         background: #55697b;
         flex-direction: column;
-        width: min(220px, 80vw);
+        width: 100%;
+        max-width: 320px;
         padding: 1rem;
-        transform: translateX(110%);
-        transition: transform 0.25s ease;
+        transform: translateX(-110%);
+        transition: transform 0.25s ease, visibility 0.25s ease;
+        visibility: hidden;
+        z-index: 10;
     }
 
     .nav.open {
         transform: translateX(0);
+        visibility: visible;
+    }
+
+    .nav a {
+        padding: 0.6rem 0;
     }
 
     .menu-toggle { display: inline-block; }

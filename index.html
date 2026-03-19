@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="#" class="logo">Daniel Alves</a>
+            <nav class="nav">
+                <a href="#home" data-translate="navHome">Início</a>
+                <a href="#about" data-translate="navAbout">Sobre</a>
+                <a href="#work" data-translate="navWork">Projetos</a>
+                <a href="#contact" data-translate="navContact">Contato</a>
+            </nav>
+            <div class="toggles">
+                <button id="lang-toggle" class="toggle-btn" aria-label="Toggle language">EN</button>
+                <button id="theme-toggle" class="toggle-btn" aria-label="Toggle theme">🌙</button>
+                <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="background">
+            <div class="container">
+                <img src="img/file.jpg" alt="Profile" class="profile-img">
+                <h1 data-translate="heroTitle">Bem vindo ao meu portfólio</h1>
+                <p data-translate="heroText">Sou um aluno da Fatec e esse é o meu portfólio.</p>
+                <a href="#work" class="btn" data-translate="btnWork">Ver meu trabalho</a>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 data-translate="aboutTitle">Sobre Mim</h2>
+                <p data-translate="aboutText">Olá, eu sou o Daniel. Sou aluno da Fatec, atualmente no curso de Desenvolvimento de Software Multiplataforma.</p>
+            </div>
+        </section>
+
+        <section id="work" class="section projects">
+            <div class="container">
+                <h2 data-translate="workTitle">Projetos</h2>
+                <div class="grid">
+                    <article class="card"> 
+                        <h3 data-translate="project1Title">Projeto 1</h3>
+                        <p><a href="https://danthebrazuca.github.io/PRIMEIROSITE/" target="_blank" rel="noopener noreferrer" data-translate="project1Text">Site do Corinthians, meu primeiro projeto da Fatec.</a></p>
+                    </article>
+                    <article class="card">
+                        <h3 data-translate="project2Title">Projeto 2</h3>
+                        <p><a href="https://danthebrazuca.github.io/SiteFatec1/" target="_blank" rel="noopener noreferrer" data-translate="project2Text">Site Fatec AMS, meu segundo projeto da Fatec.</a></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 data-translate="contactTitle">Contato</h2>
+                <p data-translate="contactText">Emails: <a href="mailto:dars120308@gmail.com">dars120308@gmail.com</a> | <a href="mailto:daniel.silva484@fatec.sp.gov.br">daniel.silva484@fatec.sp.gov.br</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p data-translate="footer">
+                © 2026 Daniel Alves. All rights reserved.
+                <br>
+                Repositório: <a href="https://github.com/DanTheBrazuca/Portfolio" target="_blank" rel="noopener noreferrer">https://github.com/DanTheBrazuca/Portfolio</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -28,7 +28,7 @@ const strings = {
         footer: '© 2026 Daniel Alves. All rights reserved.<br>Repositório: <a href="https://github.com/DanTheBrazuca/Portfolio" target="_blank"rel="noopener noreferrer">https://github.com/DanTheBrazuca/Portfolio</a>'
     },
     en: {
-        langLabel: 'PT',
+        langLabel: 'ES',
         navHome: 'Home',
         navAbout: 'About',
         navWork: 'Work',
@@ -49,6 +49,29 @@ const strings = {
         contactTitle: 'Contact',
         contactText: 'Emails: <a href="mailto:dars120308@gmail.com">dars120308@gmail.com</a> | <a href="mailto:daniel.silva484@fatec.sp.gov.br">daniel.silva484@fatec.sp.gov.br</a>',
         footer: '© 2026 Daniel Alves. All rights reserved.<br>Repository: <a href="https://github.com/DanTheBrazuca/Portfolio" target="_blank"rel="noopener noreferrer">https://github.com/DanTheBrazuca/Portfolio</a>'
+    },
+    es: {
+        langLabel: 'PT',
+        navHome: 'Inicio',
+        navAbout: 'Sobre',
+        navWork: 'Proyectos',
+        navContact: 'Contacto',
+        heroTitle: 'Bienvenido a mi portafolio',
+        heroText: 'Soy estudiante de Fatec y este es mi portafolio.',
+        btnWork: 'Ver mi trabajo',
+        aboutTitle: 'Sobre mí',
+        aboutText: 'Hola, soy Daniel. Estudio en Fatec en el curso de Desarrollo de Software Multiplataforma.',
+        workTitle: 'Proyectos',
+        sortOldest: 'Más antiguo',
+        sortNewest: 'Más nuevo',
+        showAllProjects: 'Mostrar todo',
+        project1Title: 'Proyecto 1',
+        project1Text: 'Sitio de Corinthians, mi primer proyecto en Fatec.',
+        project2Title: 'Proyecto 2',
+        project2Text: 'Sitio de Fatec AMS, mi segundo proyecto en Fatec.',
+        contactTitle: 'Contacto',
+        contactText: 'Emails: <a href="mailto:dars120308@gmail.com">dars120308@gmail.com</a> | <a href="mailto:daniel.silva484@fatec.sp.gov.br">daniel.silva484@fatec.sp.gov.br</a>',
+        footer: '© 2026 Daniel Alves. Todos los derechos reservados.<br>Repositorio: <a href="https://github.com/DanTheBrazuca/Portfolio" target="_blank"rel="noopener noreferrer">https://github.com/DanTheBrazuca/Portfolio</a>'
     }
 };
 
@@ -66,9 +89,10 @@ function renderProjects(order = 'newest') {
         return new Date(b.date) - new Date(a.date);
     });
 
+    const currentLang = document.documentElement.lang.startsWith('pt') ? 'pt' : document.documentElement.lang.startsWith('es') ? 'es' : 'en';
     grid.innerHTML = sorted.map(project => {
-        const title = strings[document.documentElement.lang.startsWith('pt') ? 'pt' : 'en'][project.titleKey];
-        const desc = strings[document.documentElement.lang.startsWith('pt') ? 'pt' : 'en'][project.descKey];
+        const title = strings[currentLang][project.titleKey];
+        const desc = strings[currentLang][project.descKey];
 
         return `
             <article class="card">
@@ -116,7 +140,11 @@ menuBtn.addEventListener('click', () => nav.classList.toggle('open'));
 
 langBtn.addEventListener('click', () => {
     const current = localStorage.getItem('site-lang') || 'pt';
-    setLanguage(current === 'pt' ? 'en' : 'pt');
+    let next;
+    if (current === 'pt') next = 'en';
+    else if (current === 'en') next = 'es';
+    else next = 'pt';
+    setLanguage(next);
 });
 
 themeBtn.addEventListener('click', () => {

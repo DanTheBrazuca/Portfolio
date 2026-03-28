@@ -8,55 +8,65 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="site-header">
+    <noscript><style>body{opacity:1;transform:none;}</style></noscript>
+    <div id="aria-live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+    <header class="site-header" role="banner">
         <div class="container">
             <a href="#" class="logo">Daniel Alves</a>
-            <nav class="nav">
+            <nav class="nav" role="navigation" aria-label="Primary">
                 <a href="#home" data-translate="navHome">Início</a>
                 <a href="#about" data-translate="navAbout">Sobre</a>
                 <a href="#work" data-translate="navWork">Projetos</a>
                 <a href="#contact" data-translate="navContact">Contato</a>
             </nav>
-            <div class="toggles">
+            <div class="toggles" role="group" aria-label="Utility controls">
                 <button id="lang-toggle" class="toggle-btn" aria-label="Toggle language">EN</button>
                 <button id="theme-toggle" class="toggle-btn" aria-label="Toggle theme">🌙</button>
                 <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+                <button id="colorblind-toggle" class="toggle-btn" aria-label="Toggle colorblind mode">🟦</button>
+            </div>
+            <div id="colorblind-menu" class="colorblind-menu" role="menu" aria-label="Colorblind filter options" hidden>
+                <button type="button" data-mode="off" data-translate="colorblindOff" role="menuitem">Off</button>
+                <button type="button" data-mode="protanopia" data-translate="colorblindProtanopia" role="menuitem">Protanopia</button>
+                <button type="button" data-mode="deuteranopia" data-translate="colorblindDeuteranopia" role="menuitem">Deuteranopia</button>
+                <button type="button" data-mode="tritanopia" data-translate="colorblindTritanopia" role="menuitem">Tritanopia</button>
+                <button type="button" data-mode="achromatopsia" data-translate="colorblindAchromatopsia" role="menuitem">Achromatopsia</button>
             </div>
         </div>
     </header>
 
-    <main>
-        <section id="home" class="background">
+    <main id="main-content" role="main">
+        <section id="home" class="background" role="region" aria-labelledby="home-title">
             <div class="container">
                 <img src="img/file.jpg" alt="Profile" class="profile-img">
-                <h1 data-translate="heroTitle">Bem vindo ao meu portfólio</h1>
+                <h1 id="home-title" data-translate="heroTitle">Bem vindo ao meu portfólio</h1>
                 <p data-translate="heroText">Sou um aluno da Fatec e esse é o meu portfólio.</p>
                 <a href="#work" class="btn" data-translate="btnWork">Ver meu trabalho</a>
             </div>
         </section>
 
-        <section id="about" class="section">
+        <section id="about" class="section" role="region" aria-labelledby="about-title">
             <div class="container">
-                <h2 data-translate="aboutTitle">Sobre Mim</h2>
+                <h2 id="about-title" data-translate="aboutTitle">Sobre Mim</h2>
                 <p data-translate="aboutText">Olá, eu sou o Daniel. Sou aluno da Fatec, atualmente no curso de Desenvolvimento de Software Multiplataforma.</p>
             </div>
         </section>
 
-        <section id="work" class="section projects">
+        <section id="work" class="section projects" role="region" aria-labelledby="work-title">
             <div class="container">
-                <h2 data-translate="workTitle">Projetos</h2>
+                <h2 id="work-title" data-translate="workTitle">Projetos</h2>
                 <div class="project-controls">
-                    <button id="sort-oldest" class="btn btn-secondary" data-translate="sortOldest">Mais antigo</button>
-                    <button id="sort-newest" class="btn btn-secondary" data-translate="sortNewest">Mais novo</button>
+                    <button id="sort-oldest" class="btn btn-secondary" aria-label="Sort projects by oldest" data-translate="sortOldest">Mais antigo</button>
+                    <button id="sort-newest" class="btn btn-secondary" aria-label="Sort projects by newest" data-translate="sortNewest">Mais novo</button>
                     <a href="projects.html" class="btn" data-translate="showAllProjects">Mostrar todos</a>
                 </div>
-                <div class="grid" id="projects-grid"></div>
+                <div class="grid" id="projects-grid" role="list" aria-label="Project list"></div>
             </div>
         </section>
 
-        <section id="contact" class="section">
+        <section id="contact" class="section" role="region" aria-labelledby="contact-title">
             <div class="container">
-                <h2 data-translate="contactTitle">Contato</h2>
+                <h2 id="contact-title" data-translate="contactTitle">Contato</h2>
                 <p data-translate="contactText">Emails: <a href="mailto:dars120308@gmail.com">dars120308@gmail.com</a> | <a href="mailto:daniel.silva484@fatec.sp.gov.br">daniel.silva484@fatec.sp.gov.br</a></p>
             </div>
         </section>

@@ -1,6 +1,33 @@
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    z-index: 999;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
 :root {
-    --color-bg: #f7f7f7;
-    --color-text: #333;
+    --color-bg: #e2e8f0;
+    --color-text: #1f2937;
     --color-primary: #0f7d48;
     --color-primary-dark: #1f634a;
     --color-accent: #2ca860;
@@ -18,6 +45,11 @@ body {
 body.loaded {
     opacity: 1;
     transform: translateY(0);
+}
+
+noscript body {
+    opacity: 1;
+    transform: none;
 }
 
 [data-theme="dark"] {
@@ -82,6 +114,15 @@ body {
     color: white;
     text-decoration: none;
     font-weight: 600;
+    padding: 0.3rem 0.45rem;
+    border-radius: 0.3rem;
+}
+
+.nav a:hover,
+.nav a:focus-visible,
+.nav a.active {
+    background: white;
+    color: var(--color-primary);
 }
 
 .menu-toggle,
@@ -145,6 +186,55 @@ body {
 .btn:focus {
     transform: translateY(-1px);
     filter: brightness(1.07);
+}
+
+.btn:focus-visible,
+.menu-toggle:focus-visible,
+.toggle-btn:focus-visible,
+.nav a:focus-visible,
+.card:focus-visible {
+    outline: 3px solid #ffbf47;
+    outline-offset: 3px;
+}
+
+.colorblind-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #55697b;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+    display: none;
+    flex-direction: column;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.colorblind-menu.open {
+    display: flex;
+}
+
+.colorblind-menu button {
+    background: transparent;
+    border: none;
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+    color: var(--color-text);
+    cursor: pointer;
+    border-radius: 0.3rem;
+}
+
+.colorblind-menu button:hover,
+.colorblind-menu button:focus-visible {
+    background: var(--color-border);
+}
+
+.colorblind-menu button.active {
+    background: var(--color-primary);
+    color: white;
 }
 
 .btn-secondary {
@@ -224,6 +314,73 @@ body {
     color: white;
 }
 
+body.colorblind-off {
+    filter: none;
+}
+
+body.colorblind-protanopia {
+    filter: grayscale(0.20) contrast(1.2) hue-rotate(20deg);
+}
+
+body.colorblind-deuteranopia {
+    filter: grayscale(0.20) contrast(1.2) hue-rotate(-20deg);
+}
+
+body.colorblind-tritanopia {
+    filter: grayscale(0.20) contrast(1.2) hue-rotate(40deg);
+}
+
+body.colorblind-achromatopsia {
+    filter: grayscale(1) contrast(1.25) brightness(1.02);
+}
+
+body.colorblind-off .site-header,
+body.colorblind-off .site-footer,
+body.colorblind-off .btn,
+body.colorblind-off .btn-secondary,
+body.colorblind-off .card,
+body.colorblind-protanopia .site-header,
+body.colorblind-protanopia .site-footer,
+body.colorblind-protanopia .btn,
+body.colorblind-protanopia .btn-secondary,
+body.colorblind-protanopia .card,
+body.colorblind-deuteranopia .site-header,
+body.colorblind-deuteranopia .site-footer,
+body.colorblind-deuteranopia .btn,
+body.colorblind-deuteranopia .btn-secondary,
+body.colorblind-deuteranopia .card,
+body.colorblind-tritanopia .site-header,
+body.colorblind-tritanopia .site-footer,
+body.colorblind-tritanopia .btn,
+body.colorblind-tritanopia .btn-secondary,
+body.colorblind-tritanopia .card,
+body.colorblind-achromatopsia .site-header,
+body.colorblind-achromatopsia .site-footer,
+body.colorblind-achromatopsia .btn,
+body.colorblind-achromatopsia .btn-secondary,
+body.colorblind-achromatopsia .card {
+    border: 2px solid #000;
+    box-shadow: none;
+}
+
+body.colorblind-off .background,
+body.colorblind-off .project-controls,
+body.colorblind-off .site-header,
+body.colorblind-protanopia .background,
+body.colorblind-protanopia .project-controls,
+body.colorblind-protanopia .site-header,
+body.colorblind-deuteranopia .background,
+body.colorblind-deuteranopia .project-controls,
+body.colorblind-deuteranopia .site-header,
+body.colorblind-tritanopia .background,
+body.colorblind-tritanopia .project-controls,
+body.colorblind-tritanopia .site-header,
+body.colorblind-achromatopsia .background,
+body.colorblind-achromatopsia .project-controls,
+body.colorblind-achromatopsia .site-header {
+    filter: contrast(1.3) saturate(0.95);
+}
+
 @media (max-width: 768px) {
     .nav {
         position: absolute;
@@ -250,4 +407,18 @@ body {
     }
 
     .menu-toggle { display: inline-block; }
+
+    .colorblind-menu {
+        position: fixed;
+        top: 56px;
+        right: 8px;
+        width: calc(100% - 16px);
+        max-width: 300px;
+        border-radius: 0.45rem;
+        z-index: 110;
+    }
+
+    .colorblind-menu.open {
+        display: flex;
+    }
 }

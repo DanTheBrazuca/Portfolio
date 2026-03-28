@@ -1,0 +1,25 @@
+main.js
+  1d14cabb9d93c73a 155-158
+style.css
+  1d14cabb9d93c73a 12-22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.22",
+  "base_commit_sha": "95900b09bebab4dda9e0ba01bfbd96198273f86f",
+  "prompts": {
+    "1d14cabb9d93c73a": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "fdd2de75-f822-4b22-8591-d6e742010d9e",
+        "model": "unknown"
+      },
+      "human_author": "DanTheBrazuca <dars120308@gmail.com>",
+      "messages": [],
+      "total_additions": 412,
+      "total_deletions": 397,
+      "accepted_lines": 412,
+      "overriden_lines": 0
+    }
+  }
+}

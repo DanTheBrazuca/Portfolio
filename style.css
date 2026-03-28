@@ -9,6 +9,17 @@
     --color-muted: #555;
 }
 
+body {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.9s ease 0.15s, transform 0.9s ease 0.15s;
+}
+
+body.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 [data-theme="dark"] {
     --color-bg: #121212;
     --color-text: #f1f1f1;

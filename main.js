@@ -152,5 +152,9 @@ themeBtn.addEventListener('click', () => {
     setTheme(current === 'light' ? 'dark' : 'light');
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+});
+
 setLanguage(localStorage.getItem('site-lang') || 'pt');
 setTheme(localStorage.getItem('site-theme') || 'light');

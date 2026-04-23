@@ -1,0 +1,42 @@
+main.js
+  h_f4232de84f9f5f 45,75,105
+  41d4784915f03222 46,76,106,115-116
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "00eb4ae61e2b53869d456194e1149f557d29aa3f",
+  "prompts": {
+    "41d4784915f03222": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "20949f8d-b588-4d5c-8157-2e53fb5b26cd",
+        "model": "unknown"
+      },
+      "human_author": "DanTheBrazuca",
+      "messages": [],
+      "total_additions": 16,
+      "total_deletions": 6,
+      "accepted_lines": 10,
+      "overriden_lines": 4
+    },
+    "e22651ee5fc1da06": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "a56937a8-3606-4d3b-8647-dbfb4685fe7e",
+        "model": "copilot/auto"
+      },
+      "human_author": "DanTheBrazuca",
+      "messages": [],
+      "total_additions": 960,
+      "total_deletions": 965,
+      "accepted_lines": 413,
+      "overriden_lines": 45
+    }
+  },
+  "humans": {
+    "h_f4232de84f9f5f": {
+      "author": "DanTheBrazuca"
+    }
+  }
+}

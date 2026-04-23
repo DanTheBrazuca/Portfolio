@@ -42,6 +42,8 @@ const strings = {
         project1Text: 'Site do Corinthians, meu primeiro projeto da Fatec.',
         project2Title: 'Projeto 2',
         project2Text: 'Site Fatec AMS, meu segundo projeto da Fatec.',
+        project3Title: 'Projeto 3',
+        project3Text: 'Site Amazon, um projeto pessoal.',
         contactTitle: 'Contato',
         contactText: 'Emails: <a href="mailto:dars120308@gmail.com">dars120308@gmail.com</a> | <a href="mailto:daniel.silva484@fatec.sp.gov.br">daniel.silva484@fatec.sp.gov.br</a>',
         footer: '© 2026 Daniel Alves. All rights reserved.<br>Repositório: <a href="https://github.com/DanTheBrazuca/Portfolio" target="_blank"rel="noopener noreferrer">https://github.com/DanTheBrazuca/Portfolio</a>'
@@ -70,6 +72,8 @@ const strings = {
         project1Text: 'Corinthians website, my first project at Fatec.',
         project2Title: 'Project 2',
         project2Text: 'Fatec AMS website, my second project at Fatec.',
+        project3Title: 'Project 3',
+        project3Text: 'Amazon website, a personal project.',
         contactTitle: 'Contact',
         contactText: 'Emails: <a href="mailto:dars120308@gmail.com">dars120308@gmail.com</a> | <a href="mailto:daniel.silva484@fatec.sp.gov.br">daniel.silva484@fatec.sp.gov.br</a>',
         footer: '© 2026 Daniel Alves. All rights reserved.<br>Repository: <a href="https://github.com/DanTheBrazuca/Portfolio" target="_blank"rel="noopener noreferrer">https://github.com/DanTheBrazuca/Portfolio</a>'
@@ -98,6 +102,8 @@ const strings = {
         project1Text: 'Sitio de Corinthians, mi primer proyecto en Fatec.',
         project2Title: 'Proyecto 2',
         project2Text: 'Sitio de Fatec AMS, mi segundo proyecto en Fatec.',
+        project3Title: 'Proyecto 3',
+        project3Text: 'Sitio de Amazon, un proyecto personal.',
         contactTitle: 'Contacto',
         contactText: 'Emails: <a href="mailto:dars120308@gmail.com">dars120308@gmail.com</a> | <a href="mailto:daniel.silva484@fatec.sp.gov.br">daniel.silva484@fatec.sp.gov.br</a>',
         footer: '© 2026 Daniel Alves. Todos los derechos reservados.<br>Repositorio: <a href="https://github.com/DanTheBrazuca/Portfolio" target="_blank"rel="noopener noreferrer">https://github.com/DanTheBrazuca/Portfolio</a>'
@@ -106,7 +112,8 @@ const strings = {
 
 const projects = [
     { id: 1, titleKey: 'project1Title', descKey: 'project1Text', url: 'https://danthebrazuca.github.io/PRIMEIROSITE/', date: '2026-03-5' },
-    { id: 2, titleKey: 'project2Title', descKey: 'project2Text', url: 'https://danthebrazuca.github.io/SiteFatec1/', date: '2026-03-10' }
+    { id: 2, titleKey: 'project2Title', descKey: 'project2Text', url: 'https://danthebrazuca.github.io/SiteFatec1/', date: '2026-03-10' },
+    { id: 3, titleKey: 'project3Title', descKey: 'project3Text', url: 'https://danthebrazuca.github.io/Amazon/', date: '2026-03-15' }
 ];
 
 function renderProjects(order = 'newest') {

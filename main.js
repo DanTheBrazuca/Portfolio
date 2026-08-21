@@ -52,7 +52,7 @@ const strings = {
     contactText:
       'Emails: <a href="mailto:dars120308@gmail.com">Email pessoal: dars120308@gmail.com</a> | <a href="mailto:daniel.silva55@aluno.cps.sp.gov.br">Email institucional: daniel.silva55@aluno.cps.sp.gov.br</a>',
     footer:
-      '© 2026 Daniel Alves. All rights reserved.<br>Repositório: <a href="https://github.com/DanTheBrazuca/Portfolio" target="_blank"rel="noopener noreferrer">https://github.com/DanTheBrazuca/Portfolio</a>',
+      '© 2026 Daniel Alves. Todos os direitos reservados.<br>Repositório: <a href="https://github.com/DanTheBrazuca/Portfolio" target="_blank"rel="noopener noreferrer">https://github.com/DanTheBrazuca/Portfolio</a>',
   },
   en: {
     langLabel: "ES",

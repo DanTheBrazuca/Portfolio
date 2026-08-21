@@ -50,7 +50,7 @@ const strings = {
     project4Text: "PDForms é um projeto interdisciplinar.",
     contactTitle: "Contato",
     contactText:
-      'Emails: <a href="mailto:dars120308@gmail.com">dars120308@gmail.com</a> | <a href="mailto:daniel.silva484@fatec.sp.gov.br">daniel.silva484@fatec.sp.gov.br</a>',
+      'Emails: <a href="mailto:dars120308@gmail.com">Email pessoal: dars120308@gmail.com</a> | <a href="mailto:daniel.silva55@aluno.cps.sp.gov.br">Email institucional: daniel.silva55@aluno.cps.sp.gov.br</a>',
     footer:
       '© 2026 Daniel Alves. All rights reserved.<br>Repositório: <a href="https://github.com/DanTheBrazuca/Portfolio" target="_blank"rel="noopener noreferrer">https://github.com/DanTheBrazuca/Portfolio</a>',
   },
@@ -85,7 +85,7 @@ const strings = {
     project4Text: "PDForms is an interdisciplinary project.",
     contactTitle: "Contact",
     contactText:
-      'Emails: <a href="mailto:dars120308@gmail.com">dars120308@gmail.com</a> | <a href="mailto:daniel.silva484@fatec.sp.gov.br">daniel.silva484@fatec.sp.gov.br</a>',
+      'Emails: <a href="mailto:dars120308@gmail.com">Personal email: dars120308@gmail.com</a> | <a href="mailto:daniel.silva55@aluno.cps.sp.gov.br">Institutional email: daniel.silva55@aluno.cps.sp.gov.br</a>',
     footer:
       '© 2026 Daniel Alves. All rights reserved.<br>Repository: <a href="https://github.com/DanTheBrazuca/Portfolio" target="_blank"rel="noopener noreferrer">https://github.com/DanTheBrazuca/Portfolio</a>',
   },
@@ -120,7 +120,7 @@ const strings = {
     project4Text: "PDForms es un proyecto interdisciplinario.",
     contactTitle: "Contacto",
     contactText:
-      'Emails: <a href="mailto:dars120308@gmail.com">dars120308@gmail.com</a> | <a href="mailto:daniel.silva484@fatec.sp.gov.br">daniel.silva484@fatec.sp.gov.br</a>',
+      'Emails: <a href="mailto:dars120308@gmail.com">Email personal: dars120308@gmail.com</a> | <a href="mailto:daniel.silva55@aluno.cps.sp.gov.br">Email institucional: daniel.silva55@aluno.cps.sp.gov.br</a>',
     footer:
       '© 2026 Daniel Alves. Todos los derechos reservados.<br>Repositorio: <a href="https://github.com/DanTheBrazuca/Portfolio" target="_blank"rel="noopener noreferrer">https://github.com/DanTheBrazuca/Portfolio</a>',
   },
